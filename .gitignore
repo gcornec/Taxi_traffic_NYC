@@ -4,5 +4,9 @@
 #Don't track those files
 .DS_Store
 /Data/train.csv
+/Data/train_speed.csv
+/Data/train_weekday_trip_counts.json
+Data/train_hour_trip_count.json
+Indicators/__pycache__/
 
 

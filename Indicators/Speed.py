@@ -1,4 +1,4 @@
-path = "../Data/"
+path = "Data/"
 filename = "train_sample.csv"
 
 import pandas as pd

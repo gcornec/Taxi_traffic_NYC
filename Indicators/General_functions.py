@@ -5,6 +5,8 @@ import datetime
 #Il s'agit de la distance great cricle / alternative à la geodesic
 def haversine_distance(lat1, lon1, lat2, lon2):
 
+    import numpy as np
+
     r = 6371
     phi1 = np.radians(lat1)
     phi2 = np.radians(lat2)
@@ -19,6 +21,8 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 #Permet ensuite de calcluler la vitesse en km/h
 def speed_estimate(df):
 
+    import pandas as pd
+    
     #On crée d'abord la variable distance
     df["distance"] = df.apply(lambda x: haversine_distance(x["pickup_latitude"], x["pickup_longitude"], x["dropoff_latitude"], x["dropoff_longitude"]), axis = 1)
     df["speed"] = (df["distance"] / df["trip_duration"]) * 3.6
