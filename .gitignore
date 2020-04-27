@@ -6,7 +6,8 @@
 /Data/train.csv
 /Data/train_speed.csv
 /Data/train_weekday_trip_counts.json
-Data/train_hour_trip_count.json
+/Data/train_hour_trip_count.json
+/Data/train_weekday_km.json
 Indicators/__pycache__/
 
 

@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import datetime
 
-#Il s'agit de la distance great cricle / alternative à la geodesic
+#Il s'agit de la distance great cricle: c'est une distance à vol d'oiseau donc cela ne correspond qu'à une approximaton
+#de la distane réellement parcourue durant la course 
 def haversine_distance(lat1, lon1, lat2, lon2):
 
     import numpy as np
@@ -22,7 +23,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 def speed_estimate(df):
 
     import pandas as pd
-    
+
     #On crée d'abord la variable distance
     df["distance"] = df.apply(lambda x: haversine_distance(x["pickup_latitude"], x["pickup_longitude"], x["dropoff_latitude"], x["dropoff_longitude"]), axis = 1)
     df["speed"] = (df["distance"] / df["trip_duration"]) * 3.6
