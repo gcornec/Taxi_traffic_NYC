@@ -9,8 +9,14 @@ def test_columns_types(df):
     for col in ["pickup_latitude", "pickup_longitude", "dropoff_latitude", "dropoff_longitude"]:
         assert type(df.pickup_latitude.iloc[0]) == numpy.float64
 
+#On test s'il y a des valeurs nulles dans le dataset (pas nécessaire qu'il n'y en ait pas ceci dit donc ce test n'est pas obligatoire)
 def test_nan(df):
     assert df.isnull().sum().sum() == 0
+
+#On test les valeurs correspondant à la durées des trajets pour vérifier qu'elles ne soient pas inférieur ou égale à 0
+#En effet, cela poserait des problèmes poiur constuire l'indicateur vitesse sinon
+def test_distance(df):
+    assert len(df[df["trip_duration"] <= 0]) == 0
 
 if __name__ == "__main__":
     import pandas as pd
@@ -23,5 +29,7 @@ if __name__ == "__main__":
     test_columns_types(df)
     print("3 - no nan values")
     test_nan(df)
+    print("4 - no negative duration")
+    test_distance(df)
 
     print("Everything passed")
