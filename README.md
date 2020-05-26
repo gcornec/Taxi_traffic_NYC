@@ -19,7 +19,7 @@ Un extrait de la base de données train.csv de kaggle est présent dans le dossi
 
 Le processus est le même pour calculer les différents indicateurs:
 
-$ python3 Indicators/nom_de_l'indicateur
+$ python3 Indicators/nom_de_l'indicateur $
 
 Ensuite, des fichiers vont se créer automatiquement dans le dossier data avec les résultats indiqués.
 
