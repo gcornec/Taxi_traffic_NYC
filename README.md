@@ -33,3 +33,6 @@ Deux sortes de tests ont été construit dans le dossier Test:
 Le code pour compiler ces tests fonctionnent de la même manière que celui pour les indicateurs:
 
 $ python3 Test/nom_du_test
+
+Pour réaliser ce travail, nous avons utiliser exclusivement python et les librairies usuelles de traitement de données (pandas, numpy) afin de gagner du temps.
+Cependant, après avoir fait des tests de calcul de vitesse sur l'ensemble du dataframe, il semblerait que la méthode choisit prenne du temps et il aurait sans doute été préférable d'utiliser des API Spark.
